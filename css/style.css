@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, #a50909, #13abed, #f9e502);
+  background-size: 600% 600%;
+  animation: heroAnimation 120s ease infinite;
+}
+
+@keyframes heroAnimation {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+div {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div h1 {
+  font-family: "Questrial", sans-serif;
+  font-size: 8vw;
+  letter-spacing: 0.1em;
+  color: #FFF;
+  text-shadow: #aaa 1px 0 3px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 50px 0 25px 0;
+}
+div img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  border: 5px solid #FFF;
+}
+div h2 {
+  font-family: "Questrial", sans-serif;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.hover {
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.scrollUp {
+  animation-duration: 1s;
+  animation-name: scrollIntoView;
+}
+
+@keyframes scrollIntoView {
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+}
+.navbar a {
+  border: 2px solid transparent;
+  font-family: "Noto Sans", sans-serif;
+  float: left;
+  display: block;
+  color: #fff;
+  text-shadow: #aaa 1px 0 1px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin: 3px;
+  transition: border-color 0.2s ease-in-out;
+}
+.navbar a:hover {
+  border: 2px solid #fff;
+}
+.navbar a.active {
+  text-decoration: underline;
+}
+
+.contentActiveNavbar {
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+}
+.contentActiveNavbar a {
+  border: 2px solid transparent;
+  font-family: "Noto Sans", sans-serif;
+  float: left;
+  display: block;
+  color: #000;
+  text-shadow: #aaa 1px 0 1px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin: 3px;
+  transition: border-color 0.2s ease-in-out;
+}
+.contentActiveNavbar a:hover {
+  border: 2px solid #000;
+}
+.contentActiveNavbar a.active {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
