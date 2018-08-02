@@ -43,6 +43,7 @@ div img {
   border: 5px solid #FFF;
 }
 div h2 {
+  font-size: 2.5vw;
   font-family: "Questrial", sans-serif;
   text-transform: uppercase;
   color: #FFF;
