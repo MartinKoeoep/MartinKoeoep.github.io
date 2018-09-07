@@ -2,20 +2,120 @@ $heroFont: 'Questrial', sans-serif;
 $textFont: 'Noto Sans', sans-serif;
 body{
   margin: 0;
+  font-family: $textFont
 }
-
+h1, h2, h3{
+  font-family: $heroFont
+}
+ul li{
+  display: inline;
+}
+section{
+  padding: 2.5vw;
+  .recentPage{
+    padding-bottom: 50px;
+    h2{
+      color: #a50909;
+    }
+    .recentHeadline{
+      display: flex;
+      flex-direction: row;
+      a{
+      color: #a50909;
+      line-height: 65px;
+      margin: 0 4px 0 4px;
+      }
+    }
+  }
+  .aboutPage{
+    padding-bottom: 50px;
+    margin: 0 15px 0 15px;
+    h2{
+      color: #a50909;
+    }
+    img{
+      height: 25%;
+      width: 25%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+section#contact{
+  h2{
+    color: #a50909;
+    text-align: center;
+  }
+  img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 5px solid #FFF;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  margin: 20px;
+  .contactContent{
+    display: flex;
+    flex-direction: row;
+    div.messaging{
+      width: 60%;
+      input, textarea {
+          padding: 9px;
+          border: solid 1px #C9C9C9;
+          outline: 0;
+          width: 90%;
+          background: #FFFFFF;
+          -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+      }
+      input:hover, textarea:hover,
+      input:focus, textarea:focus {
+        border-color: #a50909;
+      }
+      label {
+          margin-left: 0px;
+          color: #a50909;
+      }
+      button, input[type="submit"] {
+          width: auto;
+          padding: 9px 15px;
+          background: #a50909;
+          border: 0;
+          font-size: 14px;
+          color: #FFFFFF;
+      }
+    }
+    div.alternateContact{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 35%;
+      a{
+        line-height: 200%;
+        color: #a50909;
+      }
+    }
+  }
+}
+textarea {
+    width: 90%;
+    height: 150px;
+    line-height: 150%;
+}
 .hero{
   height: 100vh;
-  background: linear-gradient(120deg, #13abed, #a50909, #f9e502);
+  background: linear-gradient(120deg, #a50909, #a50909, #f9e502, #13abed);
   background-size: 600% 600%;
-  animation: heroAnimation 120s ease infinite;
+  animation: heroAnimation 30s linear infinite;
 }
 @keyframes heroAnimation {
-    0%{background-position:1% 0%}
-    50%{background-position:99% 100%}
-    100%{background-position:1% 0%}
+    0%{background-position:0% 0%}
+    50%{background-position: 100% 100%}
+    100%{background-position:0% 0%}
 }
-div{
+.frontPage{
   padding: 10%;
   display: flex;
   flex-direction: column;
@@ -49,21 +149,45 @@ div{
 .hide{
   display: none;
 }
-
-.scrollUp{
-  animation-duration: 1s;
-  animation-name: scrollIntoView;
+hr.hrStyling {
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-
-@keyframes scrollIntoView {
-  from {
-    margin-top: 100vh;
+.recentPage{
+  display: flex;
+  flex-direction: column;
+  .recentImage{
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    border: 5px solid #AAA;
+    h2, a{
+      display: inline;
+    }
   }
-  to {
-    margin-top: 0;
+  .left{
+    align-self: flex-start;
+    display: flex;
+    h2, a{
+      text-align: left;
+    }
+  }
+  .right{
+    align-self: flex-end;
+    display: flex;
+    h2, a{
+      text-align: right;
+    }
   }
 }
-
+.ContentLeft{
+  margin-right: 3%;
+}
+.ContentRight{
+  margin-left: 3%;
+}
 .navbar {
   overflow: hidden;
   position: fixed;
@@ -94,6 +218,8 @@ div{
   }
 }
 .contentActiveNavbar{
+  background-color: #FFF;
+  border-top: 1px solid #AAA;
   overflow: hidden;
   position: fixed;
   display: flex;

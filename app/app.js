@@ -9,8 +9,10 @@ $(() => {
 
   function sectionToggler(target){
     if (target !== 'index'){
-      $(`#${target}`).removeClass('hide').addClass('scrollUp');
+      $(`#${target}`).removeClass('hide');
+      $(`#${target}`).hide().fadeIn('slow');
       $('nav').removeClass('navbar').addClass('contentActiveNavbar');
+      console.log(target, 'got here');
     } else {
       $(`#${target}`).removeClass('hide');
       $(`#${target}`).hide().fadeIn('slow');
@@ -20,7 +22,7 @@ $(() => {
     const filteredList = idArray.filter( item => item !== target);
     filteredList.forEach(item => {
       $(`a[href="#${item}"]`).removeClass('active');
-      $(`#${item}`).addClass('hide').removeClass('scrollUp;');
+      $(`#${item}`).addClass('hide');
     });
   }
 
